@@ -1,0 +1,7 @@
+[flake8]
+exclude =
+    .git,
+    __pycache__,
+    tospHome/settings/*,
+    */migrations/*,
+   	./manage.py
