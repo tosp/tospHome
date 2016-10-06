@@ -1,0 +1,31 @@
+body{
+	font-family: Montserrat, Avenir Next, Helvetica, sans-serif;
+}
+
+.little-padding-first{
+	padding-top: 4vmin;
+	padding-bottom: 2vmin;
+}
+
+.little-padding-last{
+	padding-top: 2vmin;
+	padding-bottom: 4vmin;
+}
+
+.nebula {
+	background-image: url(../../images/backgrounds/nebula.jpg);
+}
+
+.padded {
+	padding-top: 6vw;
+	padding-bottom: 6vw;
+}
+
+.very-little-padding {
+	padding-top: 1vmin;
+	padding-bottom: 1vmin;
+}
+
+.white{
+	color: #FFFFFF;
+}
