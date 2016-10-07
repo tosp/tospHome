@@ -12,7 +12,7 @@ class TestBaseViews(TestCase):
 
     def test_home(self):
         self.browser.visit('http://localhost:8000')
-        if self.browser.is_text_present('[tosp] and the [tospians]'):
+        if self.browser.is_text_present('[tosp]'):
             self.assertTrue(True)
             print("Si entra al home")
         else:
