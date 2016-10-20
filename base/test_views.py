@@ -5,7 +5,7 @@ from splinter import Browser
 class TestBaseViews(TestCase):
 
     def setUp(self):
-        self.browser = Browser('firefox', capabilities={'marionette': True})
+        self.browser = Browser()
 
     def tearDown(self):
         self.browser.quit()
