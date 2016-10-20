@@ -14,12 +14,7 @@ addons:
 services:
   - postgresql
 
-install: 
-  - pip install -r requirements/CI.txt
-  - rm -rf ~/.nvm && git clone https://github.com/creationix/nvm.git ~/.nvm && (cd ~/.nvm && git checkout `git describe --abbrev=0 --tags`) && source ~/.nvm/nvm.sh && nvm install $TRAVIS_NODE_VERSION
-  - npm install
-  - npm install -g csslint
-  - sudo mkdir /root/bin
+before_install:
   - sudo wget https://github.com/mozilla/geckodriver/releases/download/v0.11.1/geckodriver-v0.11.1-linux64.tar.gz -P /root/bin
   - sudo tar -xvzf /root/bin/geckodriver-v0.11.1-linux64.tar.gz -C /root/bin
   - sudo ls /root/bin
@@ -27,8 +22,15 @@ install:
   - sudo ls /root/bin
   - sudo chmod +x /root/bin/geckodriver
   - sudo cp /root/bin/geckodriver /root/bin/wires
-  - sudo export PATH=$PATH:/root/bin/wires
-  - sudo export PATH=$PATH:/root/bin/geckodriver
+  - export PATH=$PATH:/root/bin/wires
+  - export PATH=$PATH:/root/bin/geckodriver
+
+install: 
+  - pip install -r requirements/CI.txt
+  - rm -rf ~/.nvm && git clone https://github.com/creationix/nvm.git ~/.nvm && (cd ~/.nvm && git checkout `git describe --abbrev=0 --tags`) && source ~/.nvm/nvm.sh && nvm install $TRAVIS_NODE_VERSION
+  - npm install
+  - npm install -g csslint
+  - sudo mkdir /root/bin
 
 before_script:
   - psql -c 'create database travis_ci_test;' -U postgres
