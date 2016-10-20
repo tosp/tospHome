@@ -3,20 +3,30 @@ language: python
 python:
   - "3.5"
 
+sudo: required
+
 env:
   - TRAVIS_NODE_VERSION="4"
 
-services:
-  - postgresql
-
 addons:
   firefox: latest
+
+services:
+  - postgresql
 
 install: 
   - pip install -r requirements/CI.txt
   - rm -rf ~/.nvm && git clone https://github.com/creationix/nvm.git ~/.nvm && (cd ~/.nvm && git checkout `git describe --abbrev=0 --tags`) && source ~/.nvm/nvm.sh && nvm install $TRAVIS_NODE_VERSION
   - npm install
   - npm install -g csslint
+  - sudo mkdir /root/bin
+  - sudo wget https://github.com/mozilla/geckodriver/releases/download/v0.11.1/geckodriver-v0.11.1-linux64.tar.gz -P mkdir /root/bin
+  - sudo tar -xvzf /root/bingeckodriver-v0.9.0-linux64.tar.gz
+  - sudo rm /root/bin/geckodriver-v0.9.0-linux64.tar.gz
+  - sudo chmod +x root/bin/geckodriver
+  - sudo cp /root/bin/geckodriver /root/binwires
+  - sudo export PATH=$PATH:/root/bin/wires
+  - sudo export PATH=$PATH:/root/bin/geckodriver
 
 before_script:
   - psql -c 'create database travis_ci_test;' -U postgres
