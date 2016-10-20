@@ -22,6 +22,7 @@ install:
   - sudo mkdir /root/bin
   - sudo wget https://github.com/mozilla/geckodriver/releases/download/v0.11.1/geckodriver-v0.11.1-linux64.tar.gz -P /root/bin
   - sudo tar -xvzf /root/bin/geckodriver-v0.11.1-linux64.tar.gz
+  - sudo ls /root/bin
   - sudo rm /root/bin/geckodriver-v0.11.1-linux64.tar.gz
   - sudo ls /root/bin
   - sudo chmod +x root/bin/geckodriver
