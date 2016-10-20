@@ -20,7 +20,7 @@ install:
   - npm install
   - npm install -g csslint
   - sudo mkdir /root/bin
-  - sudo wget https://github.com/mozilla/geckodriver/releases/download/v0.11.1/geckodriver-v0.11.1-linux64.tar.gz -P mkdir /root/bin
+  - sudo wget https://github.com/mozilla/geckodriver/releases/download/v0.11.1/geckodriver-v0.11.1-linux64.tar.gz -P /root/bin
   - sudo tar -xvzf /root/bingeckodriver-v0.9.0-linux64.tar.gz
   - sudo rm /root/bin/geckodriver-v0.9.0-linux64.tar.gz
   - sudo chmod +x root/bin/geckodriver
