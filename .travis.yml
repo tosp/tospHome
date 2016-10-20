@@ -9,9 +9,8 @@ env:
 services:
   - postgresql
 
-before_install:
-  addons:
-    firefox: latest
+addons:
+  firefox: latest
 
 install: 
   - pip install -r requirements/CI.txt
