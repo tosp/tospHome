@@ -18,7 +18,7 @@ class TestBaseViews(TestCase):
         else:
             self.assertTrue(False)
 
-    def test_home(self):
+    def test_mantra(self):
         self.browser.visit('http://localhost:8000')
         if self.browser.is_text_present('Be Open. Be Source.'):
             self.assertTrue(True)
