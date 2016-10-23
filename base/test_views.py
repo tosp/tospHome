@@ -5,7 +5,7 @@ from splinter import Browser
 class TestBaseViews(TestCase):
 
     def setUp(self):
-        self.browser = Browser()
+        self.browser = Browser('chrome')
 
     def tearDown(self):
         self.browser.quit()
