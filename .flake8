@@ -5,3 +5,4 @@ exclude =
     tospHome/settings/*,
     */migrations/*,
    	./manage.py
+max-line-length=99
