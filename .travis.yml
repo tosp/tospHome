@@ -3,11 +3,27 @@ language: python
 python:
   - "3.5"
 
+sudo: required
+dist: trusty
+
 env:
   - TRAVIS_NODE_VERSION="4"
 
+addons:
+  apt:
+    packages:
+      - chromium-browser
+      - chromium-chromedriver
+
 services:
   - postgresql
+
+before_install:
+  - wget http://chromedriver.storage.googleapis.com/2.21/chromedriver_linux64.zip
+  - unzip chromedriver_linux64.zip
+  - sudo chmod u+x chromedriver
+  - sudo mv chromedriver /usr/bin/
+  - export CHROME_BIN=chromium-browser
 
 install: 
   - pip install -r requirements/CI.txt
