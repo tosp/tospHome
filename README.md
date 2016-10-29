@@ -5,9 +5,9 @@ This is the new home for everything [tosp] related
 
 ## System Requirements
 
-*[Python 3.5](https://www.python.org/downloads/)
-*[PostgreSQL 9.5+](https://wiki.postgresql.org/wiki/Detailed_installation_guides)
-*[Node 4+](https://docs.npmjs.com/getting-started/installing-node)
+* [Python 3.5](https://www.python.org/downloads/)
+* [PostgreSQL 9.5+](https://wiki.postgresql.org/wiki/Detailed_installation_guides)
+* [Node 4+](https://docs.npmjs.com/getting-started/installing-node)
 
 ## Virtual Environments
 
