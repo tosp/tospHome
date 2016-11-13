@@ -9,6 +9,10 @@ This is the new home for everything [tosp] related
 * [PostgreSQL 9.5+](https://wiki.postgresql.org/wiki/Detailed_installation_guides)
 * [Node 4+](https://docs.npmjs.com/getting-started/installing-node)
 
+## Creating a Database
+
+## Cloning the project
+
 ## Virtual Environments
 
 You will need to create a virtual environment in order to isolate all the packages that are required for the project. We provide instructions on how to do it with [`virtualenv`](https://virtualenv.pypa.io/en/stable/)
@@ -37,7 +41,7 @@ DB_HOST
 DB_PORT
 ```
 
-In order to set them in your virtualenv just go to `/path/to/your/venv/NAME_OF_YOUR_ENV/bin/activate` and in the section for deactivate add at the end
+In order to set them in your virtualenv just open the following file `/path/to/your/venv/NAME_OF_YOUR_ENV/bin/activate` and in the section for deactivate add at the end
 
 ```bash
 unset NAME_OF_ENV_VAR
